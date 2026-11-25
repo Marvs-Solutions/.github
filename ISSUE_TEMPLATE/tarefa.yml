@@ -1,0 +1,37 @@
+name: Tarefa
+description: Trabalho planejado (funcionalidade, ajuste, documentação)
+labels: ["tarefa"]
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: O que precisa existir quando a tarefa terminar.
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceite
+      description: Como saber que está pronto.
+      placeholder: |
+        - [ ] ...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Web
+        - Mobile
+        - Infra
+        - Integração
+        - Documentação
+    validations:
+      required: true
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto e referências
+      description: Links, prints, decisões anteriores.
